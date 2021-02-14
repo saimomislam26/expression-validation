@@ -4,7 +4,7 @@ let myvar1;
 let validation = document.getElementById('list');
 let show = document.querySelector('.show');
 
-let postcode = /\d{4}/
+let postcode = /^\d{4}$/
 let email = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 let phonevalid = /^(\+(?=880))?(880)?01[0-9]{9}$/
 let password = /^(?=.*[0-9])(?=.*[!@#$%&*])[a-zA-Z0-9!@#$%&*]{8,}$/
@@ -28,7 +28,7 @@ function getSelectValue() {
             <div class="mb-3 row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10 contpass">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="must be contain a special character and a numeric value upto 8 characters" style="font-size:1em">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="must be contain a special character and a numeric value equal or above 8 characters" style="font-size:1em">
                     <span class="form1"> </span>
                 </div>
                 
@@ -176,7 +176,7 @@ function getSelectValue() {
         <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Post Code</label>
         <div class="col-sm-10 cont">
-            <input type="text"  class="form-control" id="post" value="" placeholder="Put your Post Code" style="font-size:1em">
+            <input type="text"  class="form-control" id="post" value="" placeholder="Must be a 4 no digit according to Bangladesh" style="font-size:1em">
             <span class="form"> </span>
         </div>
     </div>
